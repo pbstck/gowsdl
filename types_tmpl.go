@@ -32,11 +32,6 @@ var typesTmpl = `
 {{end}}
 
 {{define "ComplexContent"}}
-	{{$baseType := toGoType .Extension.Base false}}
-	{{ if $baseType }}
-		{{$baseType}}
-	{{end}}
-
 	{{template "Elements" .Extension.Sequence}}
 	{{template "Elements" .Extension.Choice}}
 	{{template "Elements" .Extension.SequenceChoice}}
@@ -150,7 +145,7 @@ var typesTmpl = `
 				{{else}}
 					type {{$typeName}} interface{}
 				{{end}}
-			
+
 				{{if .Restriction.Enumeration}}
 				const (
 					{{with .Restriction}}
