@@ -445,7 +445,6 @@ var xsd2GoTypes = map[string]string{
 	"long":          "int64",
 	"boolean":       "bool",
 	"datetime":      "soap.XSDDateTime",
-	"date":          "soap.XSDDate",
 	"time":          "soap.XSDTime",
 	"base64binary":  "[]byte",
 	"hexbinary":     "[]byte",
